@@ -19,7 +19,7 @@
 			reg = <0>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdc";
+			riscv,isa = "rv64imafdc_sstc";
 			mmu-type = "riscv,sv48";
 			cpu0_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -87,7 +87,7 @@
 	};
 
 	chosen {
-		bootargs = "console=ttyS0,9600 earlycon rdinit=/sbin/init root=/dev/ram0 rw initrd=0x30000000,32M retain_initrd rdmem=0x80000000,2040M";
+		bootargs = "console=ttyS0,9600 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x30000000,32M rdmem=0x80000000,2040M";
 		stdout-path = "serial0";
 	};
 };
