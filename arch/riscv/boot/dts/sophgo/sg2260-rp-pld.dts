@@ -4,10 +4,11 @@
 	compatible = "sophgo, sg2260_pld";
 	#address-cells = <2>;
 	#size-cells = <2>;
+	dma-noncoherent;
 
-	memory@0 {
+	memory@80000000 {
 		device_type = "memory";
-		reg = <0x00000000 0x00200000 0x00000000 0x7fe00000>;
+		reg = <0x00000000 0x80000000 0x00000000 0x80000000>;
 	};
 
 	cpus {
@@ -19,7 +20,9 @@
 			reg = <0>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu0_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -32,7 +35,9 @@
 			reg = <1>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu1_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -45,7 +50,9 @@
 			reg = <2>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu2_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -58,7 +65,9 @@
 			reg = <3>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu3_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -71,7 +80,9 @@
 			reg = <4>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu4_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -84,7 +95,9 @@
 			reg = <5>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu5_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -97,7 +110,9 @@
 			reg = <6>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu6_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -110,7 +125,9 @@
 			reg = <7>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu7_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -123,7 +140,9 @@
 			reg = <8>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu8_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -136,7 +155,9 @@
 			reg = <9>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu9_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -149,7 +170,9 @@
 			reg = <10>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu10_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -162,7 +185,9 @@
 			reg = <11>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu11_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -175,7 +200,9 @@
 			reg = <12>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu12_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -188,7 +215,9 @@
 			reg = <13>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu13_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -201,7 +230,9 @@
 			reg = <14>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu14_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -214,7 +245,9 @@
 			reg = <15>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu15_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -227,7 +260,9 @@
 			reg = <16>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu16_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -240,7 +275,9 @@
 			reg = <17>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu17_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -253,7 +290,9 @@
 			reg = <18>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu18_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -266,7 +305,9 @@
 			reg = <19>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu19_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -279,7 +320,9 @@
 			reg = <20>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu20_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -292,7 +335,9 @@
 			reg = <21>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu21_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -305,7 +350,9 @@
 			reg = <22>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu22_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -318,7 +365,9 @@
 			reg = <23>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu23_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -331,7 +380,9 @@
 			reg = <24>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu24_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -344,7 +395,9 @@
 			reg = <25>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu25_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -357,7 +410,9 @@
 			reg = <26>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu26_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -370,7 +425,9 @@
 			reg = <27>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu27_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -383,7 +440,9 @@
 			reg = <28>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu28_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -396,7 +455,9 @@
 			reg = <29>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu29_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -409,7 +470,9 @@
 			reg = <30>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu30_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -422,7 +485,9 @@
 			reg = <31>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu31_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -435,7 +500,9 @@
 			reg = <32>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu32_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -448,7 +515,9 @@
 			reg = <33>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu33_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -461,7 +530,9 @@
 			reg = <34>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu34_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -474,7 +545,9 @@
 			reg = <35>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu35_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -487,7 +560,9 @@
 			reg = <36>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu36_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -500,7 +575,9 @@
 			reg = <37>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu37_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -513,7 +590,9 @@
 			reg = <38>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu38_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -526,7 +605,9 @@
 			reg = <39>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu39_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -539,7 +620,9 @@
 			reg = <40>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu40_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -552,7 +635,9 @@
 			reg = <41>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu41_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -565,7 +650,9 @@
 			reg = <42>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu42_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -578,7 +665,9 @@
 			reg = <43>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu43_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -591,7 +680,9 @@
 			reg = <44>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu44_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -604,7 +695,9 @@
 			reg = <45>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu45_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -617,7 +710,9 @@
 			reg = <46>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu46_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -630,7 +725,9 @@
 			reg = <47>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu47_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -643,7 +740,9 @@
 			reg = <48>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu48_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -656,7 +755,9 @@
 			reg = <49>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu49_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -669,7 +770,9 @@
 			reg = <50>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu50_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -682,7 +785,9 @@
 			reg = <51>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu51_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -695,7 +800,9 @@
 			reg = <52>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu52_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -708,7 +815,9 @@
 			reg = <53>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu53_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -721,7 +830,9 @@
 			reg = <54>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu54_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -734,7 +845,9 @@
 			reg = <55>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu55_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -747,7 +860,9 @@
 			reg = <56>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu56_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -760,7 +875,9 @@
 			reg = <57>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu57_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -773,7 +890,9 @@
 			reg = <58>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu58_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -786,7 +905,9 @@
 			reg = <59>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu59_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -799,7 +920,9 @@
 			reg = <60>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu60_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -812,7 +935,9 @@
 			reg = <61>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu61_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -825,7 +950,9 @@
 			reg = <62>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu62_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -838,7 +965,9 @@
 			reg = <63>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_sstc";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,cbom-block-size = <64>;
+			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
 			cpu63_intc: interrupt-controller {
 				#interrupt-cells = <1>;
@@ -854,81 +983,222 @@
 		compatible = "simple-bus";
 		ranges;
 
-		//64cores PLIC0
+		clint_mswi: clint-mswi@6d44000000 {
+			compatible = "thead,c900-clint-mswi";
+			reg = <0x0000006d 0x44000000 0x00000000 0x00004000>;
+			interrupts-extended = <
+				&cpu0_intc 3
+				&cpu1_intc 3
+				&cpu2_intc 3
+				&cpu3_intc 3
+				&cpu4_intc 3
+				&cpu5_intc 3
+				&cpu6_intc 3
+				&cpu7_intc 3
+				&cpu8_intc 3
+				&cpu9_intc 3
+				&cpu10_intc 3
+				&cpu11_intc 3
+				&cpu12_intc 3
+				&cpu13_intc 3
+				&cpu14_intc 3
+				&cpu15_intc 3
+				&cpu16_intc 3
+				&cpu17_intc 3
+				&cpu18_intc 3
+				&cpu19_intc 3
+				&cpu20_intc 3
+				&cpu21_intc 3
+				&cpu22_intc 3
+				&cpu23_intc 3
+				&cpu24_intc 3
+				&cpu25_intc 3
+				&cpu26_intc 3
+				&cpu27_intc 3
+				&cpu28_intc 3
+				&cpu29_intc 3
+				&cpu30_intc 3
+				&cpu31_intc 3
+				&cpu32_intc 3
+				&cpu33_intc 3
+				&cpu34_intc 3
+				&cpu35_intc 3
+				&cpu36_intc 3
+				&cpu37_intc 3
+				&cpu38_intc 3
+				&cpu39_intc 3
+				&cpu40_intc 3
+				&cpu41_intc 3
+				&cpu42_intc 3
+				&cpu43_intc 3
+				&cpu44_intc 3
+				&cpu45_intc 3
+				&cpu46_intc 3
+				&cpu47_intc 3
+				&cpu48_intc 3
+				&cpu49_intc 3
+				&cpu50_intc 3
+				&cpu51_intc 3
+				&cpu52_intc 3
+				&cpu53_intc 3
+				&cpu54_intc 3
+				&cpu55_intc 3
+				&cpu56_intc 3
+				&cpu57_intc 3
+				&cpu58_intc 3
+				&cpu59_intc 3
+				&cpu60_intc 3
+				&cpu61_intc 3
+				&cpu62_intc 3
+				&cpu63_intc 3
+				>;
+		};
+
+		clint_mtimer: clint-mtimer@6840000000 {
+			compatible = "thead,c900-clint-mtimer";
+			reg = <0x00000068 0x40000000 0x00000000 0x00008000>;
+			interrupts-extended = <
+				&cpu0_intc 7
+				&cpu1_intc 7
+				&cpu2_intc 7
+				&cpu3_intc 7
+				&cpu4_intc 7
+				&cpu5_intc 7
+				&cpu6_intc 7
+				&cpu7_intc 7
+				&cpu8_intc 7
+				&cpu9_intc 7
+				&cpu10_intc 7
+				&cpu11_intc 7
+				&cpu12_intc 7
+				&cpu13_intc 7
+				&cpu14_intc 7
+				&cpu15_intc 7
+				&cpu16_intc 7
+				&cpu17_intc 7
+				&cpu18_intc 7
+				&cpu19_intc 7
+				&cpu20_intc 7
+				&cpu21_intc 7
+				&cpu22_intc 7
+				&cpu23_intc 7
+				&cpu24_intc 7
+				&cpu25_intc 7
+				&cpu26_intc 7
+				&cpu27_intc 7
+				&cpu28_intc 7
+				&cpu29_intc 7
+				&cpu30_intc 7
+				&cpu31_intc 7
+				&cpu32_intc 7
+				&cpu33_intc 7
+				&cpu34_intc 7
+				&cpu35_intc 7
+				&cpu36_intc 7
+				&cpu37_intc 7
+				&cpu38_intc 7
+				&cpu39_intc 7
+				&cpu40_intc 7
+				&cpu41_intc 7
+				&cpu42_intc 7
+				&cpu43_intc 7
+				&cpu44_intc 7
+				&cpu45_intc 7
+				&cpu46_intc 7
+				&cpu47_intc 7
+				&cpu48_intc 7
+				&cpu49_intc 7
+				&cpu50_intc 7
+				&cpu51_intc 7
+				&cpu52_intc 7
+				&cpu53_intc 7
+				&cpu54_intc 7
+				&cpu55_intc 7
+				&cpu56_intc 7
+				&cpu57_intc 7
+				&cpu58_intc 7
+				&cpu59_intc 7
+				&cpu60_intc 7
+				&cpu61_intc 7
+				&cpu62_intc 7
+				&cpu63_intc 7
+				>;
+		};
+
 		intc: interrupt-controller@6d40000000 {
 			#interrupt-cells = <1>;
 			compatible = "riscv,plic0";
 			interrupt-controller;
 			interrupts-extended = <
-				&cpu0_intc  0xffffffff &cpu0_intc  9
-				&cpu1_intc  0xffffffff &cpu1_intc  9
-				&cpu2_intc  0xffffffff &cpu2_intc  9
-				&cpu3_intc  0xffffffff &cpu3_intc  9
-				&cpu4_intc  0xffffffff &cpu4_intc  9
-				&cpu5_intc  0xffffffff &cpu5_intc  9
-				&cpu6_intc  0xffffffff &cpu6_intc  9
-				&cpu7_intc  0xffffffff &cpu7_intc  9
-				&cpu8_intc  0xffffffff &cpu8_intc  9
-				&cpu9_intc  0xffffffff &cpu9_intc  9
-				&cpu10_intc  0xffffffff &cpu10_intc  9
-				&cpu11_intc  0xffffffff &cpu11_intc  9
-				&cpu12_intc  0xffffffff &cpu12_intc  9
-				&cpu13_intc  0xffffffff &cpu13_intc  9
-				&cpu14_intc  0xffffffff &cpu14_intc  9
-				&cpu15_intc  0xffffffff &cpu15_intc  9
-				&cpu16_intc  0xffffffff &cpu16_intc  9
-				&cpu17_intc  0xffffffff &cpu17_intc  9
-				&cpu18_intc  0xffffffff &cpu18_intc  9
-				&cpu19_intc  0xffffffff &cpu19_intc  9
-				&cpu20_intc  0xffffffff &cpu20_intc  9
-				&cpu21_intc  0xffffffff &cpu21_intc  9
-				&cpu22_intc  0xffffffff &cpu22_intc  9
-				&cpu23_intc  0xffffffff &cpu23_intc  9
-				&cpu24_intc  0xffffffff &cpu24_intc  9
-				&cpu25_intc  0xffffffff &cpu25_intc  9
-				&cpu26_intc  0xffffffff &cpu26_intc  9
-				&cpu27_intc  0xffffffff &cpu27_intc  9
-				&cpu28_intc  0xffffffff &cpu28_intc  9
-				&cpu29_intc  0xffffffff &cpu29_intc  9
-				&cpu30_intc  0xffffffff &cpu30_intc  9
-				&cpu31_intc  0xffffffff &cpu31_intc  9
-				&cpu32_intc  0xffffffff &cpu32_intc  9
-				&cpu33_intc  0xffffffff &cpu33_intc  9
-				&cpu34_intc  0xffffffff &cpu34_intc  9
-				&cpu35_intc  0xffffffff &cpu35_intc  9
-				&cpu36_intc  0xffffffff &cpu36_intc  9
-				&cpu37_intc  0xffffffff &cpu37_intc  9
-				&cpu38_intc  0xffffffff &cpu38_intc  9
-				&cpu39_intc  0xffffffff &cpu39_intc  9
-				&cpu40_intc  0xffffffff &cpu40_intc  9
-				&cpu41_intc  0xffffffff &cpu41_intc  9
-				&cpu42_intc  0xffffffff &cpu42_intc  9
-				&cpu43_intc  0xffffffff &cpu43_intc  9
-				&cpu44_intc  0xffffffff &cpu44_intc  9
-				&cpu45_intc  0xffffffff &cpu45_intc  9
-				&cpu46_intc  0xffffffff &cpu46_intc  9
-				&cpu47_intc  0xffffffff &cpu47_intc  9
-				&cpu48_intc  0xffffffff &cpu48_intc  9
-				&cpu49_intc  0xffffffff &cpu49_intc  9
-				&cpu50_intc  0xffffffff &cpu50_intc  9
-				&cpu51_intc  0xffffffff &cpu51_intc  9
-				&cpu52_intc  0xffffffff &cpu52_intc  9
-				&cpu53_intc  0xffffffff &cpu53_intc  9
-				&cpu54_intc  0xffffffff &cpu54_intc  9
-				&cpu55_intc  0xffffffff &cpu55_intc  9
-				&cpu56_intc  0xffffffff &cpu56_intc  9
-				&cpu57_intc  0xffffffff &cpu57_intc  9
-				&cpu58_intc  0xffffffff &cpu58_intc  9
-				&cpu59_intc  0xffffffff &cpu59_intc  9
-				&cpu60_intc  0xffffffff &cpu60_intc  9
-				&cpu61_intc  0xffffffff &cpu61_intc  9
-				&cpu62_intc  0xffffffff &cpu62_intc  9
-				&cpu63_intc  0xffffffff &cpu63_intc  9
+				&cpu0_intc  11 &cpu0_intc  9
+				&cpu1_intc  11 &cpu1_intc  9
+				&cpu2_intc  11 &cpu2_intc  9
+				&cpu3_intc  11 &cpu3_intc  9
+				&cpu4_intc  11 &cpu4_intc  9
+				&cpu5_intc  11 &cpu5_intc  9
+				&cpu6_intc  11 &cpu6_intc  9
+				&cpu7_intc  11 &cpu7_intc  9
+				&cpu8_intc  11 &cpu8_intc  9
+				&cpu9_intc  11 &cpu9_intc  9
+				&cpu10_intc  11 &cpu10_intc  9
+				&cpu11_intc  11 &cpu11_intc  9
+				&cpu12_intc  11 &cpu12_intc  9
+				&cpu13_intc  11 &cpu13_intc  9
+				&cpu14_intc  11 &cpu14_intc  9
+				&cpu15_intc  11 &cpu15_intc  9
+				&cpu16_intc  11 &cpu16_intc  9
+				&cpu17_intc  11 &cpu17_intc  9
+				&cpu18_intc  11 &cpu18_intc  9
+				&cpu19_intc  11 &cpu19_intc  9
+				&cpu20_intc  11 &cpu20_intc  9
+				&cpu21_intc  11 &cpu21_intc  9
+				&cpu22_intc  11 &cpu22_intc  9
+				&cpu23_intc  11 &cpu23_intc  9
+				&cpu24_intc  11 &cpu24_intc  9
+				&cpu25_intc  11 &cpu25_intc  9
+				&cpu26_intc  11 &cpu26_intc  9
+				&cpu27_intc  11 &cpu27_intc  9
+				&cpu28_intc  11 &cpu28_intc  9
+				&cpu29_intc  11 &cpu29_intc  9
+				&cpu30_intc  11 &cpu30_intc  9
+				&cpu31_intc  11 &cpu31_intc  9
+				&cpu32_intc  11 &cpu32_intc  9
+				&cpu33_intc  11 &cpu33_intc  9
+				&cpu34_intc  11 &cpu34_intc  9
+				&cpu35_intc  11 &cpu35_intc  9
+				&cpu36_intc  11 &cpu36_intc  9
+				&cpu37_intc  11 &cpu37_intc  9
+				&cpu38_intc  11 &cpu38_intc  9
+				&cpu39_intc  11 &cpu39_intc  9
+				&cpu40_intc  11 &cpu40_intc  9
+				&cpu41_intc  11 &cpu41_intc  9
+				&cpu42_intc  11 &cpu42_intc  9
+				&cpu43_intc  11 &cpu43_intc  9
+				&cpu44_intc  11 &cpu44_intc  9
+				&cpu45_intc  11 &cpu45_intc  9
+				&cpu46_intc  11 &cpu46_intc  9
+				&cpu47_intc  11 &cpu47_intc  9
+				&cpu48_intc  11 &cpu48_intc  9
+				&cpu49_intc  11 &cpu49_intc  9
+				&cpu50_intc  11 &cpu50_intc  9
+				&cpu51_intc  11 &cpu51_intc  9
+				&cpu52_intc  11 &cpu52_intc  9
+				&cpu53_intc  11 &cpu53_intc  9
+				&cpu54_intc  11 &cpu54_intc  9
+				&cpu55_intc  11 &cpu55_intc  9
+				&cpu56_intc  11 &cpu56_intc  9
+				&cpu57_intc  11 &cpu57_intc  9
+				&cpu58_intc  11 &cpu58_intc  9
+				&cpu59_intc  11 &cpu59_intc  9
+				&cpu60_intc  11 &cpu60_intc  9
+				&cpu61_intc  11 &cpu61_intc  9
+				&cpu62_intc  11 &cpu62_intc  9
+				&cpu63_intc  11 &cpu63_intc  9
 				>;
 			reg = <0x0000006d 0x40000000 0x00000000 0x10000000>;
 			reg-names = "control";
 			riscv,max-priority = <7>;
-			riscv,ndev = <179>;
+			riscv,ndev = <863>;
 		};
 
 		dummy_apb: apb-clock {
@@ -952,11 +1222,11 @@
 			#clock-cells = <0>;
 		};
 
-		uart0: serial@7030000000 {
+		uart0: serial@7030001000 {
 			compatible = "snps,dw-apb-uart";
-			reg = <0x00000070 0x30000000 0x00000000 0x00001000>;
+			reg = <0x00000070 0x30001000 0x00000000 0x00001000>;
 			interrupt-parent = <&intc>;
-			interrupts = <73>;
+			interrupts = <42>;
 			clock-frequency = <153600>;
 			clock-names = "baudclk";
 			reg-shift = <2>;
@@ -969,7 +1239,7 @@
 	};
 
 	chosen {
-		bootargs = "console=ttyS0,9600 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x30000000,32M rdmem=0x80000000,2040M";
+		bootargs = "console=ttyS0,9600 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x8b000000,32M rdmem=0x100000000,4096M";
 		stdout-path = "serial0";
 	};
 };
