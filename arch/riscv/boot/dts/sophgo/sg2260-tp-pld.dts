@@ -87,7 +87,7 @@
 	};
 
 	chosen {
-		bootargs = "console=ttyS0,9600 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x30000000,32M rdmem=0x80000000,2040M";
+		bootargs = "console=ttyS0,9600 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x30000000,32M rdmem=0x80000000,2040M no5lvl";
 		stdout-path = "serial0";
 	};
 };
