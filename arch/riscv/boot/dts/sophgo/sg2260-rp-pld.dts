@@ -1,4 +1,11 @@
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Copyright (C) 2022 Sophgo Technology Inc. All rights reserved.
+ */
+
 /dts-v1/;
+#include <dt-bindings/interrupt-controller/irq.h>
+
 / {
 	model = "sophgo sg2260";
 	compatible = "sophgo, sg2260_pld";
@@ -20,7 +27,7 @@
 			reg = <0>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -35,7 +42,7 @@
 			reg = <1>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -50,7 +57,7 @@
 			reg = <2>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -65,7 +72,7 @@
 			reg = <3>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -80,7 +87,7 @@
 			reg = <4>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -95,7 +102,7 @@
 			reg = <5>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -110,7 +117,7 @@
 			reg = <6>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -125,7 +132,7 @@
 			reg = <7>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -140,7 +147,7 @@
 			reg = <8>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -155,7 +162,7 @@
 			reg = <9>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -170,7 +177,7 @@
 			reg = <10>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -185,7 +192,7 @@
 			reg = <11>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -200,7 +207,7 @@
 			reg = <12>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -215,7 +222,7 @@
 			reg = <13>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -230,7 +237,7 @@
 			reg = <14>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -245,7 +252,7 @@
 			reg = <15>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -260,7 +267,7 @@
 			reg = <16>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -275,7 +282,7 @@
 			reg = <17>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -290,7 +297,7 @@
 			reg = <18>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -305,7 +312,7 @@
 			reg = <19>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -320,7 +327,7 @@
 			reg = <20>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -335,7 +342,7 @@
 			reg = <21>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -350,7 +357,7 @@
 			reg = <22>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -365,7 +372,7 @@
 			reg = <23>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -380,7 +387,7 @@
 			reg = <24>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -395,7 +402,7 @@
 			reg = <25>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -410,7 +417,7 @@
 			reg = <26>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -425,7 +432,7 @@
 			reg = <27>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -440,7 +447,7 @@
 			reg = <28>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -455,7 +462,7 @@
 			reg = <29>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -470,7 +477,7 @@
 			reg = <30>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -485,7 +492,7 @@
 			reg = <31>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -500,7 +507,7 @@
 			reg = <32>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -515,7 +522,7 @@
 			reg = <33>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -530,7 +537,7 @@
 			reg = <34>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -545,7 +552,7 @@
 			reg = <35>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -560,7 +567,7 @@
 			reg = <36>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -575,7 +582,7 @@
 			reg = <37>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -590,7 +597,7 @@
 			reg = <38>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -605,7 +612,7 @@
 			reg = <39>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -620,7 +627,7 @@
 			reg = <40>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -635,7 +642,7 @@
 			reg = <41>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -650,7 +657,7 @@
 			reg = <42>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -665,7 +672,7 @@
 			reg = <43>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -680,7 +687,7 @@
 			reg = <44>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -695,7 +702,7 @@
 			reg = <45>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -710,7 +717,7 @@
 			reg = <46>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -725,7 +732,7 @@
 			reg = <47>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -740,7 +747,7 @@
 			reg = <48>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -755,7 +762,7 @@
 			reg = <49>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -770,7 +777,7 @@
 			reg = <50>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -785,7 +792,7 @@
 			reg = <51>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -800,7 +807,7 @@
 			reg = <52>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -815,7 +822,7 @@
 			reg = <53>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -830,7 +837,7 @@
 			reg = <54>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -845,7 +852,7 @@
 			reg = <55>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -860,7 +867,7 @@
 			reg = <56>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -875,7 +882,7 @@
 			reg = <57>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -890,7 +897,7 @@
 			reg = <58>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -905,7 +912,7 @@
 			reg = <59>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -920,7 +927,7 @@
 			reg = <60>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -935,7 +942,7 @@
 			reg = <61>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -950,7 +957,7 @@
 			reg = <62>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -965,7 +972,7 @@
 			reg = <63>;
 			status = "okay";
 			compatible = "riscv";
-			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt_xtheadc_xtheadvdot";
+			riscv,isa = "rv64imafdcv_zicbom_zicbop_zicboz_zicond1p0_zihintntl0p2_zihintpause_zawrs_zfa0p1_zfbfmin0p8_zfh_zca_zcb_zcd_zba_zbb_zbc_zbs_zvfbfmin0p8_zvfbfwma0p8_zvfh0p1_sscofpmf_sstc_svinval_svnapot_svpbmt";
 			riscv,cbom-block-size = <64>;
 			riscv,cboz-block-size = <64>;
 			mmu-type = "riscv,sv48";
@@ -977,228 +984,312 @@
 		};
 	};
 
+	pmu {
+		compatible = "riscv,pmu";
+		riscv,event-to-mhpmevent =
+			<0x00003 0x00000000 0x00000010>,
+			<0x00004 0x00000000 0x00000011>,
+			<0x00005 0x00000000 0x00000007>,
+			<0x00006 0x00000000 0x00000006>,
+			<0x00008 0x00000000 0x00000027>,
+			<0x00009 0x00000000 0x00000028>,
+			<0x10000 0x00000000 0x0000000c>,
+			<0x10001 0x00000000 0x0000000d>,
+			<0x10002 0x00000000 0x0000000e>,
+			<0x10003 0x00000000 0x0000000f>,
+			<0x10008 0x00000000 0x00000001>,
+			<0x10009 0x00000000 0x00000002>,
+			<0x10010 0x00000000 0x00000010>,
+			<0x10011 0x00000000 0x00000011>,
+			<0x10012 0x00000000 0x00000012>,
+			<0x10013 0x00000000 0x00000013>,
+			<0x10019 0x00000000 0x00000004>,
+			<0x10021 0x00000000 0x00000003>,
+			<0x10030 0x00000000 0x0000001c>,
+			<0x10031 0x00000000 0x0000001b>;
+		riscv,event-to-mhpmcounters =
+			<0x00003 0x00003 0xfffffff8>,
+			<0x00004 0x00004 0xfffffff8>,
+			<0x00005 0x00005 0xfffffff8>,
+			<0x00006 0x00006 0xfffffff8>,
+			<0x00007 0x00007 0xfffffff8>,
+			<0x00008 0x00008 0xfffffff8>,
+			<0x00009 0x00009 0xfffffff8>,
+			<0x0000a 0x0000a 0xfffffff8>,
+			<0x10000 0x10000 0xfffffff8>,
+			<0x10001 0x10001 0xfffffff8>,
+			<0x10002 0x10002 0xfffffff8>,
+			<0x10003 0x10003 0xfffffff8>,
+			<0x10008 0x10008 0xfffffff8>,
+			<0x10009 0x10009 0xfffffff8>,
+			<0x10010 0x10010 0xfffffff8>,
+			<0x10011 0x10011 0xfffffff8>,
+			<0x10012 0x10012 0xfffffff8>,
+			<0x10013 0x10013 0xfffffff8>,
+			<0x10019 0x10019 0xfffffff8>,
+			<0x10021 0x10021 0xfffffff8>,
+			<0x10030 0x10030 0xfffffff8>,
+			<0x10031 0x10031 0xfffffff8>;
+		riscv,raw-event-to-mhpmcounters =
+			<0x00000000 0x00000001 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000002 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000003 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000004 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000005 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000006 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000007 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000008 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000009 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000000a 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000000b 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000000c 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000000d 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000000e 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000000f 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000010 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000011 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000012 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000013 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000014 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000015 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000016 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000017 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000018 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000019 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000001a 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000001b 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000001c 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000001d 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000001e 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000001f 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000020 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000021 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000022 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000023 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000024 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000025 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000026 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000027 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000028 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x00000029 0xffffffff 0xffffffff 0xfffffff8>,
+			<0x00000000 0x0000002a 0xffffffff 0xffffffff 0xfffffff8>;
+	};
+
 	soc {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		compatible = "simple-bus";
 		ranges;
 
-		clint_mswi: clint-mswi@6d44000000 {
+		clint_mswi: interrupt-controller@6d44000000 {
 			compatible = "thead,c900-clint-mswi";
 			reg = <0x0000006d 0x44000000 0x00000000 0x00004000>;
-			interrupts-extended = <
-				&cpu0_intc 3
-				&cpu1_intc 3
-				&cpu2_intc 3
-				&cpu3_intc 3
-				&cpu4_intc 3
-				&cpu5_intc 3
-				&cpu6_intc 3
-				&cpu7_intc 3
-				&cpu8_intc 3
-				&cpu9_intc 3
-				&cpu10_intc 3
-				&cpu11_intc 3
-				&cpu12_intc 3
-				&cpu13_intc 3
-				&cpu14_intc 3
-				&cpu15_intc 3
-				&cpu16_intc 3
-				&cpu17_intc 3
-				&cpu18_intc 3
-				&cpu19_intc 3
-				&cpu20_intc 3
-				&cpu21_intc 3
-				&cpu22_intc 3
-				&cpu23_intc 3
-				&cpu24_intc 3
-				&cpu25_intc 3
-				&cpu26_intc 3
-				&cpu27_intc 3
-				&cpu28_intc 3
-				&cpu29_intc 3
-				&cpu30_intc 3
-				&cpu31_intc 3
-				&cpu32_intc 3
-				&cpu33_intc 3
-				&cpu34_intc 3
-				&cpu35_intc 3
-				&cpu36_intc 3
-				&cpu37_intc 3
-				&cpu38_intc 3
-				&cpu39_intc 3
-				&cpu40_intc 3
-				&cpu41_intc 3
-				&cpu42_intc 3
-				&cpu43_intc 3
-				&cpu44_intc 3
-				&cpu45_intc 3
-				&cpu46_intc 3
-				&cpu47_intc 3
-				&cpu48_intc 3
-				&cpu49_intc 3
-				&cpu50_intc 3
-				&cpu51_intc 3
-				&cpu52_intc 3
-				&cpu53_intc 3
-				&cpu54_intc 3
-				&cpu55_intc 3
-				&cpu56_intc 3
-				&cpu57_intc 3
-				&cpu58_intc 3
-				&cpu59_intc 3
-				&cpu60_intc 3
-				&cpu61_intc 3
-				&cpu62_intc 3
-				&cpu63_intc 3
-				>;
+			interrupts-extended = <&cpu0_intc  3>,
+					      <&cpu1_intc  3>,
+					      <&cpu2_intc  3>,
+					      <&cpu3_intc  3>,
+					      <&cpu4_intc  3>,
+					      <&cpu5_intc  3>,
+					      <&cpu6_intc  3>,
+					      <&cpu7_intc  3>,
+					      <&cpu8_intc  3>,
+					      <&cpu9_intc  3>,
+					      <&cpu10_intc 3>,
+					      <&cpu11_intc 3>,
+					      <&cpu12_intc 3>,
+					      <&cpu13_intc 3>,
+					      <&cpu14_intc 3>,
+					      <&cpu15_intc 3>,
+					      <&cpu16_intc 3>,
+					      <&cpu17_intc 3>,
+					      <&cpu18_intc 3>,
+					      <&cpu19_intc 3>,
+					      <&cpu20_intc 3>,
+					      <&cpu21_intc 3>,
+					      <&cpu22_intc 3>,
+					      <&cpu23_intc 3>,
+					      <&cpu24_intc 3>,
+					      <&cpu25_intc 3>,
+					      <&cpu26_intc 3>,
+					      <&cpu27_intc 3>,
+					      <&cpu28_intc 3>,
+					      <&cpu29_intc 3>,
+					      <&cpu30_intc 3>,
+					      <&cpu31_intc 3>,
+					      <&cpu32_intc 3>,
+					      <&cpu33_intc 3>,
+					      <&cpu34_intc 3>,
+					      <&cpu35_intc 3>,
+					      <&cpu36_intc 3>,
+					      <&cpu37_intc 3>,
+					      <&cpu38_intc 3>,
+					      <&cpu39_intc 3>,
+					      <&cpu40_intc 3>,
+					      <&cpu41_intc 3>,
+					      <&cpu42_intc 3>,
+					      <&cpu43_intc 3>,
+					      <&cpu44_intc 3>,
+					      <&cpu45_intc 3>,
+					      <&cpu46_intc 3>,
+					      <&cpu47_intc 3>,
+					      <&cpu48_intc 3>,
+					      <&cpu49_intc 3>,
+					      <&cpu50_intc 3>,
+					      <&cpu51_intc 3>,
+					      <&cpu52_intc 3>,
+					      <&cpu53_intc 3>,
+					      <&cpu54_intc 3>,
+					      <&cpu55_intc 3>,
+					      <&cpu56_intc 3>,
+					      <&cpu57_intc 3>,
+					      <&cpu58_intc 3>,
+					      <&cpu59_intc 3>,
+					      <&cpu60_intc 3>,
+					      <&cpu61_intc 3>,
+					      <&cpu62_intc 3>,
+					      <&cpu63_intc 3>;
 		};
 
-		clint_mtimer: clint-mtimer@6840000000 {
+		clint_mtimer: timer@6840000000 {
 			compatible = "thead,c900-clint-mtimer";
 			reg = <0x00000068 0x40000000 0x00000000 0x00008000>;
-			interrupts-extended = <
-				&cpu0_intc 7
-				&cpu1_intc 7
-				&cpu2_intc 7
-				&cpu3_intc 7
-				&cpu4_intc 7
-				&cpu5_intc 7
-				&cpu6_intc 7
-				&cpu7_intc 7
-				&cpu8_intc 7
-				&cpu9_intc 7
-				&cpu10_intc 7
-				&cpu11_intc 7
-				&cpu12_intc 7
-				&cpu13_intc 7
-				&cpu14_intc 7
-				&cpu15_intc 7
-				&cpu16_intc 7
-				&cpu17_intc 7
-				&cpu18_intc 7
-				&cpu19_intc 7
-				&cpu20_intc 7
-				&cpu21_intc 7
-				&cpu22_intc 7
-				&cpu23_intc 7
-				&cpu24_intc 7
-				&cpu25_intc 7
-				&cpu26_intc 7
-				&cpu27_intc 7
-				&cpu28_intc 7
-				&cpu29_intc 7
-				&cpu30_intc 7
-				&cpu31_intc 7
-				&cpu32_intc 7
-				&cpu33_intc 7
-				&cpu34_intc 7
-				&cpu35_intc 7
-				&cpu36_intc 7
-				&cpu37_intc 7
-				&cpu38_intc 7
-				&cpu39_intc 7
-				&cpu40_intc 7
-				&cpu41_intc 7
-				&cpu42_intc 7
-				&cpu43_intc 7
-				&cpu44_intc 7
-				&cpu45_intc 7
-				&cpu46_intc 7
-				&cpu47_intc 7
-				&cpu48_intc 7
-				&cpu49_intc 7
-				&cpu50_intc 7
-				&cpu51_intc 7
-				&cpu52_intc 7
-				&cpu53_intc 7
-				&cpu54_intc 7
-				&cpu55_intc 7
-				&cpu56_intc 7
-				&cpu57_intc 7
-				&cpu58_intc 7
-				&cpu59_intc 7
-				&cpu60_intc 7
-				&cpu61_intc 7
-				&cpu62_intc 7
-				&cpu63_intc 7
-				>;
+			interrupts-extended = <&cpu0_intc  7>,
+					      <&cpu1_intc  7>,
+					      <&cpu2_intc  7>,
+					      <&cpu3_intc  7>,
+					      <&cpu4_intc  7>,
+					      <&cpu5_intc  7>,
+					      <&cpu6_intc  7>,
+					      <&cpu7_intc  7>,
+					      <&cpu8_intc  7>,
+					      <&cpu9_intc  7>,
+					      <&cpu10_intc 7>,
+					      <&cpu11_intc 7>,
+					      <&cpu12_intc 7>,
+					      <&cpu13_intc 7>,
+					      <&cpu14_intc 7>,
+					      <&cpu15_intc 7>,
+					      <&cpu16_intc 7>,
+					      <&cpu17_intc 7>,
+					      <&cpu18_intc 7>,
+					      <&cpu19_intc 7>,
+					      <&cpu20_intc 7>,
+					      <&cpu21_intc 7>,
+					      <&cpu22_intc 7>,
+					      <&cpu23_intc 7>,
+					      <&cpu24_intc 7>,
+					      <&cpu25_intc 7>,
+					      <&cpu26_intc 7>,
+					      <&cpu27_intc 7>,
+					      <&cpu28_intc 7>,
+					      <&cpu29_intc 7>,
+					      <&cpu30_intc 7>,
+					      <&cpu31_intc 7>,
+					      <&cpu32_intc 7>,
+					      <&cpu33_intc 7>,
+					      <&cpu34_intc 7>,
+					      <&cpu35_intc 7>,
+					      <&cpu36_intc 7>,
+					      <&cpu37_intc 7>,
+					      <&cpu38_intc 7>,
+					      <&cpu39_intc 7>,
+					      <&cpu40_intc 7>,
+					      <&cpu41_intc 7>,
+					      <&cpu42_intc 7>,
+					      <&cpu43_intc 7>,
+					      <&cpu44_intc 7>,
+					      <&cpu45_intc 7>,
+					      <&cpu46_intc 7>,
+					      <&cpu47_intc 7>,
+					      <&cpu48_intc 7>,
+					      <&cpu49_intc 7>,
+					      <&cpu50_intc 7>,
+					      <&cpu51_intc 7>,
+					      <&cpu52_intc 7>,
+					      <&cpu53_intc 7>,
+					      <&cpu54_intc 7>,
+					      <&cpu55_intc 7>,
+					      <&cpu56_intc 7>,
+					      <&cpu57_intc 7>,
+					      <&cpu58_intc 7>,
+					      <&cpu59_intc 7>,
+					      <&cpu60_intc 7>,
+					      <&cpu61_intc 7>,
+					      <&cpu62_intc 7>,
+					      <&cpu63_intc 7>;
 		};
 
 		intc: interrupt-controller@6d40000000 {
-			#interrupt-cells = <1>;
-			compatible = "riscv,plic0";
-			interrupt-controller;
-			interrupts-extended = <
-				&cpu0_intc  11 &cpu0_intc  9
-				&cpu1_intc  11 &cpu1_intc  9
-				&cpu2_intc  11 &cpu2_intc  9
-				&cpu3_intc  11 &cpu3_intc  9
-				&cpu4_intc  11 &cpu4_intc  9
-				&cpu5_intc  11 &cpu5_intc  9
-				&cpu6_intc  11 &cpu6_intc  9
-				&cpu7_intc  11 &cpu7_intc  9
-				&cpu8_intc  11 &cpu8_intc  9
-				&cpu9_intc  11 &cpu9_intc  9
-				&cpu10_intc  11 &cpu10_intc  9
-				&cpu11_intc  11 &cpu11_intc  9
-				&cpu12_intc  11 &cpu12_intc  9
-				&cpu13_intc  11 &cpu13_intc  9
-				&cpu14_intc  11 &cpu14_intc  9
-				&cpu15_intc  11 &cpu15_intc  9
-				&cpu16_intc  11 &cpu16_intc  9
-				&cpu17_intc  11 &cpu17_intc  9
-				&cpu18_intc  11 &cpu18_intc  9
-				&cpu19_intc  11 &cpu19_intc  9
-				&cpu20_intc  11 &cpu20_intc  9
-				&cpu21_intc  11 &cpu21_intc  9
-				&cpu22_intc  11 &cpu22_intc  9
-				&cpu23_intc  11 &cpu23_intc  9
-				&cpu24_intc  11 &cpu24_intc  9
-				&cpu25_intc  11 &cpu25_intc  9
-				&cpu26_intc  11 &cpu26_intc  9
-				&cpu27_intc  11 &cpu27_intc  9
-				&cpu28_intc  11 &cpu28_intc  9
-				&cpu29_intc  11 &cpu29_intc  9
-				&cpu30_intc  11 &cpu30_intc  9
-				&cpu31_intc  11 &cpu31_intc  9
-				&cpu32_intc  11 &cpu32_intc  9
-				&cpu33_intc  11 &cpu33_intc  9
-				&cpu34_intc  11 &cpu34_intc  9
-				&cpu35_intc  11 &cpu35_intc  9
-				&cpu36_intc  11 &cpu36_intc  9
-				&cpu37_intc  11 &cpu37_intc  9
-				&cpu38_intc  11 &cpu38_intc  9
-				&cpu39_intc  11 &cpu39_intc  9
-				&cpu40_intc  11 &cpu40_intc  9
-				&cpu41_intc  11 &cpu41_intc  9
-				&cpu42_intc  11 &cpu42_intc  9
-				&cpu43_intc  11 &cpu43_intc  9
-				&cpu44_intc  11 &cpu44_intc  9
-				&cpu45_intc  11 &cpu45_intc  9
-				&cpu46_intc  11 &cpu46_intc  9
-				&cpu47_intc  11 &cpu47_intc  9
-				&cpu48_intc  11 &cpu48_intc  9
-				&cpu49_intc  11 &cpu49_intc  9
-				&cpu50_intc  11 &cpu50_intc  9
-				&cpu51_intc  11 &cpu51_intc  9
-				&cpu52_intc  11 &cpu52_intc  9
-				&cpu53_intc  11 &cpu53_intc  9
-				&cpu54_intc  11 &cpu54_intc  9
-				&cpu55_intc  11 &cpu55_intc  9
-				&cpu56_intc  11 &cpu56_intc  9
-				&cpu57_intc  11 &cpu57_intc  9
-				&cpu58_intc  11 &cpu58_intc  9
-				&cpu59_intc  11 &cpu59_intc  9
-				&cpu60_intc  11 &cpu60_intc  9
-				&cpu61_intc  11 &cpu61_intc  9
-				&cpu62_intc  11 &cpu62_intc  9
-				&cpu63_intc  11 &cpu63_intc  9
-				>;
+			compatible = "thead,c900-plic";
+			#address-cells = <0>;
+			#interrupt-cells = <2>;
 			reg = <0x0000006d 0x40000000 0x00000000 0x10000000>;
-			reg-names = "control";
-			riscv,max-priority = <7>;
 			riscv,ndev = <863>;
+			interrupt-controller;
+			interrupts-extended = <&cpu0_intc   11>, < &cpu0_intc   9>,
+					      <&cpu1_intc   11>, < &cpu1_intc   9>,
+					      <&cpu2_intc   11>, < &cpu2_intc   9>,
+					      <&cpu3_intc   11>, < &cpu3_intc   9>,
+					      <&cpu4_intc   11>, < &cpu4_intc   9>,
+					      <&cpu5_intc   11>, < &cpu5_intc   9>,
+					      <&cpu6_intc   11>, < &cpu6_intc   9>,
+					      <&cpu7_intc   11>, < &cpu7_intc   9>,
+					      <&cpu8_intc   11>, < &cpu8_intc   9>,
+					      <&cpu9_intc   11>, < &cpu9_intc   9>,
+					      <&cpu10_intc  11>, < &cpu10_intc  9>,
+					      <&cpu11_intc  11>, < &cpu11_intc  9>,
+					      <&cpu12_intc  11>, < &cpu12_intc  9>,
+					      <&cpu13_intc  11>, < &cpu13_intc  9>,
+					      <&cpu14_intc  11>, < &cpu14_intc  9>,
+					      <&cpu15_intc  11>, < &cpu15_intc  9>,
+					      <&cpu16_intc  11>, < &cpu16_intc  9>,
+					      <&cpu17_intc  11>, < &cpu17_intc  9>,
+					      <&cpu18_intc  11>, < &cpu18_intc  9>,
+					      <&cpu19_intc  11>, < &cpu19_intc  9>,
+					      <&cpu20_intc  11>, < &cpu20_intc  9>,
+					      <&cpu21_intc  11>, < &cpu21_intc  9>,
+					      <&cpu22_intc  11>, < &cpu22_intc  9>,
+					      <&cpu23_intc  11>, < &cpu23_intc  9>,
+					      <&cpu24_intc  11>, < &cpu24_intc  9>,
+					      <&cpu25_intc  11>, < &cpu25_intc  9>,
+					      <&cpu26_intc  11>, < &cpu26_intc  9>,
+					      <&cpu27_intc  11>, < &cpu27_intc  9>,
+					      <&cpu28_intc  11>, < &cpu28_intc  9>,
+					      <&cpu29_intc  11>, < &cpu29_intc  9>,
+					      <&cpu30_intc  11>, < &cpu30_intc  9>,
+					      <&cpu31_intc  11>, < &cpu31_intc  9>,
+					      <&cpu32_intc  11>, < &cpu32_intc  9>,
+					      <&cpu33_intc  11>, < &cpu33_intc  9>,
+					      <&cpu34_intc  11>, < &cpu34_intc  9>,
+					      <&cpu35_intc  11>, < &cpu35_intc  9>,
+					      <&cpu36_intc  11>, < &cpu36_intc  9>,
+					      <&cpu37_intc  11>, < &cpu37_intc  9>,
+					      <&cpu38_intc  11>, < &cpu38_intc  9>,
+					      <&cpu39_intc  11>, < &cpu39_intc  9>,
+					      <&cpu40_intc  11>, < &cpu40_intc  9>,
+					      <&cpu41_intc  11>, < &cpu41_intc  9>,
+					      <&cpu42_intc  11>, < &cpu42_intc  9>,
+					      <&cpu43_intc  11>, < &cpu43_intc  9>,
+					      <&cpu44_intc  11>, < &cpu44_intc  9>,
+					      <&cpu45_intc  11>, < &cpu45_intc  9>,
+					      <&cpu46_intc  11>, < &cpu46_intc  9>,
+					      <&cpu47_intc  11>, < &cpu47_intc  9>,
+					      <&cpu48_intc  11>, < &cpu48_intc  9>,
+					      <&cpu49_intc  11>, < &cpu49_intc  9>,
+					      <&cpu50_intc  11>, < &cpu50_intc  9>,
+					      <&cpu51_intc  11>, < &cpu51_intc  9>,
+					      <&cpu52_intc  11>, < &cpu52_intc  9>,
+					      <&cpu53_intc  11>, < &cpu53_intc  9>,
+					      <&cpu54_intc  11>, < &cpu54_intc  9>,
+					      <&cpu55_intc  11>, < &cpu55_intc  9>,
+					      <&cpu56_intc  11>, < &cpu56_intc  9>,
+					      <&cpu57_intc  11>, < &cpu57_intc  9>,
+					      <&cpu58_intc  11>, < &cpu58_intc  9>,
+					      <&cpu59_intc  11>, < &cpu59_intc  9>,
+					      <&cpu60_intc  11>, < &cpu60_intc  9>,
+					      <&cpu61_intc  11>, < &cpu61_intc  9>,
+					      <&cpu62_intc  11>, < &cpu62_intc  9>,
+					      <&cpu63_intc  11>, < &cpu63_intc  9>;
 		};
 
 		dummy_apb: apb-clock {
@@ -1226,7 +1317,7 @@
 			compatible = "snps,dw-apb-uart";
 			reg = <0x00000070 0x30001000 0x00000000 0x00001000>;
 			interrupt-parent = <&intc>;
-			interrupts = <42>;
+			interrupts = <42 IRQ_TYPE_LEVEL_HIGH>;
 			clock-frequency = <153600>;
 			clock-names = "baudclk";
 			reg-shift = <2>;
