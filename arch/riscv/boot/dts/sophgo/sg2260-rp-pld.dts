@@ -19,7 +19,7 @@
 
 	memory@80000000 {
 		device_type = "memory";
-		reg = <0x00000000 0x80000000 0x00000000 0x80000000>;
+		reg = <0x00000000 0x80000000 0x00000010 0x00000000>;
 	};
 
 	cpus {
@@ -1079,6 +1079,19 @@
 			<0x00000000 0x0000002a 0xffffffff 0xffffffff 0xfffffff8>;
 	};
 
+	top_misc: top_misc_ctrl@7050000000 {
+		compatible = "syscon";
+		reg = <0x70 0x50000000 0x0 0x8000>;
+	};
+
+	rst: reset-controller {
+		#reset-cells = <1>;
+		compatible = "sophgo,reset";
+		subctrl-syscon = <&top_misc>;
+		top_rst_offset = <0x3000>;
+		nr_resets = <RST_MAX_NUM>;
+	};
+
 	soc {
 		#address-cells = <2>;
 		#size-cells = <2>;
@@ -1296,27 +1309,6 @@
 					      <&cpu63_intc  11>, < &cpu63_intc  9>;
 		};
 
-		dummy_apb: apb-clock {
-			compatible = "fixed-clock";
-			clock-frequency = <250000000>;
-			clock-output-names = "dummy_apb";
-			#clock-cells = <0>;
-		};
-
-		dummy_ahb: ahb-clock {
-			compatible = "fixed-clock";
-			clock-frequency = <250000000>;
-			clock-output-names = "dummy_ahb";
-			#clock-cells = <0>;
-		};
-
-		dummy_axi: axi-clock {
-			compatible = "fixed-clock";
-			clock-frequency = <25000000>;
-			clock-output-names = "dummy_axi";
-			#clock-cells = <0>;
-		};
-
 		uart0: serial@7030001000 {
 			compatible = "snps,dw-apb-uart";
 			reg = <0x00000070 0x30001000 0x00000000 0x00001000>;
@@ -1352,7 +1344,7 @@
 				"clk_gate_100k_sd";
 		};
 
-		p2p:  p2p {
+		p2p: p2p {
 			compatible = "sophgon, p2p";
 			reg = <0x0000006c 0x08790000 0x00000000 0x000010000>,
 			      <0x0000006c 0x087D0000 0x00000000 0x000010000>;
@@ -1371,59 +1363,62 @@
 		      #interrupt-cells = <1>;
 		      compatible = "sophgo,vc_drv";
 		      reg = <0x6b 0x00180000 0x0 0x10000>,
-		            <0x6b 0x00190000 0x0 0x10000>,
-		            <0x6b 0x001a0000 0x0 0x10000>,
-		            <0x6b 0x001b0000 0x0 0x10000>,
-		            <0x6b 0x02180000 0x0 0x10000>,
-		            <0x6b 0x02190000 0x0 0x10000>,
-		            <0x6b 0x021a0000 0x0 0x10000>,
-		            <0x6b 0x021b0000 0x0 0x10000>,
-		            <0x6b 0x04180000 0x0 0x10000>,
-		            <0x6b 0x04190000 0x0 0x10000>,
-		            <0x6b 0x041a0000 0x0 0x10000>,
-		            <0x6b 0x041b0000 0x0 0x10000>,
-		            <0x6b 0x06180000 0x0 0x10000>,
-		            <0x6b 0x06190000 0x0 0x10000>,
-		            <0x6b 0x061a0000 0x0 0x10000>,
-		            <0x6b 0x061b0000 0x0 0x10000>,
-				    <0x00 0x00010000 0x0 0x10000>,
-				    <0x00 0x00020000 0x0 0x10000>,
-				    <0x00 0x02010000 0x0 0x10000>,
-				    <0x00 0x02020000 0x0 0x10000>,
-				    <0x00 0x04010000 0x0 0x10000>,
-				    <0x00 0x04020000 0x0 0x10000>,
-				    <0x00 0x06010000 0x0 0x10000>,
-				    <0x00 0x06020000 0x0 0x10000>,
-					<0x6b 0x00040000 0x0 0x10000>,
-					<0x6b 0x00042000 0x0 0x10000>,
-					<0x6b 0x02040000 0x0 0x10000>,
-					<0x6b 0x02042000 0x0 0x10000>,
-					<0x6b 0x04040000 0x0 0x10000>,
-					<0x6b 0x04042000 0x0 0x10000>,
-					<0x6b 0x06040000 0x0 0x10000>,
-					<0x6b 0x06042000 0x0 0x10000>;
+			    <0x6b 0x00190000 0x0 0x10000>,
+			    <0x6b 0x001a0000 0x0 0x10000>,
+			    <0x6b 0x001b0000 0x0 0x10000>,
+			    <0x6b 0x02180000 0x0 0x10000>,
+			    <0x6b 0x02190000 0x0 0x10000>,
+			    <0x6b 0x021a0000 0x0 0x10000>,
+			    <0x6b 0x021b0000 0x0 0x10000>,
+			    <0x6b 0x04180000 0x0 0x10000>,
+			    <0x6b 0x04190000 0x0 0x10000>,
+			    <0x6b 0x041a0000 0x0 0x10000>,
+			    <0x6b 0x041b0000 0x0 0x10000>,
+			    <0x6b 0x06180000 0x0 0x10000>,
+			    <0x6b 0x06190000 0x0 0x10000>,
+			    <0x6b 0x061a0000 0x0 0x10000>,
+			    <0x6b 0x061b0000 0x0 0x10000>,
+			    <0x00 0x00010000 0x0 0x10000>,
+			    <0x00 0x00020000 0x0 0x10000>,
+			    <0x00 0x02010000 0x0 0x10000>,
+			    <0x00 0x02020000 0x0 0x10000>,
+			    <0x00 0x04010000 0x0 0x10000>,
+			    <0x00 0x04020000 0x0 0x10000>,
+			    <0x00 0x06010000 0x0 0x10000>,
+			    <0x00 0x06020000 0x0 0x10000>,
+			    <0x6b 0x00040000 0x0 0x10000>,
+			    <0x6b 0x00042000 0x0 0x10000>,
+			    <0x6b 0x02040000 0x0 0x10000>,
+			    <0x6b 0x02042000 0x0 0x10000>,
+			    <0x6b 0x04040000 0x0 0x10000>,
+			    <0x6b 0x04042000 0x0 0x10000>,
+			    <0x6b 0x06040000 0x0 0x10000>,
+			    <0x6b 0x06042000 0x0 0x10000>;
 
-				  interrupt-parent = <&intc>;
-				  interrupts = <161 162 167 168 201 202 207 208 241 242 247 248 281 282 287 288
-						       136 140 176 180 216 220 256 260
-						       137 141 177 181 217 221 257 261
-						       138 142 178 182 218 222 258 262
-						       139 143 179 183 219 223 259 263
-								148 149 188 189 228 229 267 268>;
+			    interrupt-parent = <&intc>;
+			    interrupts = <161 162 167 168 201 202 207 208
+					  241 242 247 248 281 282 287 288
+					  136 140 176 180 216 220 256 260
+					  137 141 177 181 217 221 257 261
+					  138 142 178 182 218 222 258 262
+					  139 143 179 183 219 223 259 263
+					  148 149 188 189 228 229 267 268>;
 		};
 
 		vpss {
-		      #interrupt-cells = <1>;
-		      compatible = "sophgo,vpss";
-		      reg = <0x0000006B 0x00100000 0x00000000 0x0007FFFF>,
-				  <0x0000006B 0x02100000 0x00000000 0x0007FFFF>,
-				  <0x0000006B 0x04100000 0x00000000 0x0007FFFF>,
-				  <0x0000006B 0x06100000 0x00000000 0x0007FFFF>;
+			#interrupt-cells = <1>;
+			compatible = "sophgo,vpss";
+			reg = <0x0000006B 0x00100000 0x00000000 0x0007FFFF>,
+			      <0x0000006B 0x02100000 0x00000000 0x0007FFFF>,
+			      <0x0000006B 0x04100000 0x00000000 0x0007FFFF>,
+			      <0x0000006B 0x06100000 0x00000000 0x0007FFFF>;
 
-				  interrupt-parent = <&intc>;
-				  interrupts = <157 158 159 160 163 164 165 166 197 198 199 200 203 204 205 206
-				  				237 238 239 240 243 244 245 246 277 278 279 280 283 284 285 286>;
-     	};
+			interrupt-parent = <&intc>;
+			interrupts = <157 158 159 160 163 164 165 166
+				      197 198 199 200 203 204 205 206
+				      237 238 239 240 243 244 245 246
+				      277 278 279 280 283 284 285 286>;
+		};
 
 		sg2260_host_driver@0 {
 			compatible = "sophgo,sg2260_host_driver";
@@ -1438,20 +1433,7 @@
 	};
 
 	chosen {
-		bootargs = "console=ttyS0,115200 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x8b000000,32M rdmem=0x100000000,4096M no5lvl";
+		bootargs = "console=ttyS0,115200 earlycon rdinit=/init root=/dev/ram0 rw initrd=0x8b000000,32M no5lvl";
 		stdout-path = "serial0";
-	};
-
-	top_misc: top_misc_ctrl@7050000000 {
-		compatible = "syscon";
-		reg = <0x70 0x50000000 0x0 0x8000>;
-	};
-
-	rst: reset-controller {
-		#reset-cells = <1>;
-		compatible = "sophgo,reset";
-		subctrl-syscon = <&top_misc>;
-		top_rst_offset = <0x3000>;
-		nr_resets = <RST_MAX_NUM>;
 	};
 };
