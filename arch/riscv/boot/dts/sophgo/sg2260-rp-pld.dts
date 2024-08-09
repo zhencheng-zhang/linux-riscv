@@ -1079,11 +1079,6 @@
 			<0x00000000 0x0000002a 0xffffffff 0xffffffff 0xfffffff8>;
 	};
 
-	top_misc: top_misc_ctrl@7050000000 {
-		compatible = "syscon";
-		reg = <0x70 0x50000000 0x0 0x8000>;
-	};
-
 	rst: reset-controller {
 		#reset-cells = <1>;
 		compatible = "sophgo,reset";
