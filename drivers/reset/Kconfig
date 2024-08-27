@@ -239,7 +239,7 @@ config RESET_SOCFPGA
 
 config RESET_SOPHGO
 	bool "SG2044 Reset Driver"
-	default CONFIG_SOC_SOPHGO
+	default CONFIG_ARCH_SOPHGO
 	select RESET_SIMPLE
 	help
 	  This enables the reset driver for the SG2044 platforms. This
